@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    
+    
+    
+    
+    
+
+
+    <!-- meta -->
+
+
+<title>《计算机网络教程》笔记 | NB的网站</title>
+
+
+    <meta name="keywords" content="资料">
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="OSI模型(共7层)1.应用层 是为计算机用户提供应用接口，也为用户直接提供各种网络服务。我们常见应用层的网络服务协议有：HTTP，HTTPS，FTP，POP3、SMTP等。 2.表示层 表示层提供各种用于应用层数据的编码和转换功能,确保一个系统的应用层发送的数据能被另一个系统的应用层识别. 由于公司A和公司B是不同国家的公司，他们之间的商定统一用英语作为交流的语言，所以此时表示层（公司的文秘），">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《计算机网络教程》笔记">
+<meta property="og:url" content="http://example.com/2021/03/17/555/index.html">
+<meta property="og:site_name" content="NB的网站">
+<meta property="og:description" content="OSI模型(共7层)1.应用层 是为计算机用户提供应用接口，也为用户直接提供各种网络服务。我们常见应用层的网络服务协议有：HTTP，HTTPS，FTP，POP3、SMTP等。 2.表示层 表示层提供各种用于应用层数据的编码和转换功能,确保一个系统的应用层发送的数据能被另一个系统的应用层识别. 由于公司A和公司B是不同国家的公司，他们之间的商定统一用英语作为交流的语言，所以此时表示层（公司的文秘），">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/09/sQRonS.md.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/09/sQRh1P.md.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/09/sQR5X8.md.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/09/sQRKWq.md.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/09/sQRQS0.png">
+<meta property="article:published_time" content="2021-03-17T09:24:02.513Z">
+<meta property="article:modified_time" content="2021-03-09T12:54:06.033Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="资料">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://s3.ax1x.com/2021/01/09/sQRonS.md.png">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none">
+        
+    
+
+    
+    
+
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">验玉</span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">首页</a>
+                
+                    <a href="/tags/" class="navbar-menu button">标签</a>
+                
+                    <a href="/archives/" class="navbar-menu button">归档</a>
+                
+                    <a href="/friends/" class="navbar-menu button">友链</a>
+                
+                    <a href="/page/" class="navbar-menu button">Page</a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">首页</a>
+                
+                    <a href="/tags/" class="dropdown-menu button">标签</a>
+                
+                    <a href="/archives/" class="dropdown-menu button">归档</a>
+                
+                    <a href="/friends/" class="dropdown-menu button">友链</a>
+                
+                    <a href="/page/" class="dropdown-menu button">Page</a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        《计算机网络教程》笔记
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2021/03/" class="post-meta__date button">2021-03-17</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <h3 id="OSI模型-共7层"><a href="#OSI模型-共7层" class="headerlink" title="OSI模型(共7层)"></a>OSI模型(共7层)</h3><p>1.应用层</p>
+<p>是为计算机用户提供应用接口，也为用户直接提供各种网络服务。我们常见应用层的网络服务协议有：HTTP，HTTPS，FTP，POP3、SMTP等。</p>
+<p>2.表示层</p>
+<p>表示层提供各种用于应用层数据的编码和转换功能,确保一个系统的应用层发送的数据能被另一个系统的应用层识别.</p>
+<p><strong>由于公司A和公司B是不同国家的公司，他们之间的商定统一用英语作为交流的语言，所以此时表示层（公司的文秘），就是将应用层的传递信息转翻译成英语。同时为了防止别的公司看到，公司A的人也会对这份报价单做一些加密的处理。这就是表示的作用，将应用层的数据转换翻译等。</strong></p>
+<p>3.会话层</p>
+<p>会话层就是负责建立、管理和终止表示层实体之间的通信会话。该层的通信由不同设备中的应用程序之间的服务请求和响应组成。</p>
+<p><strong>会话层的同事拿到表示层的同事转换后资料，（会话层的同事类似公司的外联部），会话层的同事那里可能会掌握本公司与其他好多公司的联系方式，这里公司就是实际传递过程中的实体。他们要管理本公司与外界好多公司的联系会话。当接收到表示层的数据后，会话层将会建立并记录本次会话，他首先要找到公司B的地址信息，然后将整份资料放进信封，并写上地址和联系方式。准备将资料寄出。等到确定公司B接收到此份报价单后，此次会话就算结束了，外联部的同事就会终止此次会话。</strong></p>
+<p>4.传输层</p>
+<p>传输层建立了主机端到端的链接，传输层的作用是为上层协议提供端到端的可靠和透明的数据传输服务，包括处理差错控制和流量控制等问题。该层向高层屏蔽了下层数据通信的细节，使高层用户看到的只是在两个传输实体间的一条主机到主机的、可由用户控制和设定的、可靠的数据通路。我们通常说的，TCP UDP就是在这一层。端口号既是这里的“端”。</p>
+<p><strong>传输层就相当于公司中的负责快递邮件收发的人，公司自己的投递员，他们负责将上一层的要寄出的资料投递到快递公司或邮局。</strong></p>
+<p>5.网络层</p>
+<p> 本层通过IP寻址来建立两个节点之间的连接，为源端的运输层送来的分组，选择合适的路由和交换节点，正确无误地按照地址传送给目的端的运输层。就是通常说的IP层。这一层就是我们经常说的IP协议层。IP协议是Internet的基础。</p>
+<p><strong>网络层就相当于快递公司庞大的快递网络，全国不同的集散中心，比如说，从深圳发往北京的顺丰快递（陆运为例啊，空运好像直接就飞到北京了），首先要到顺丰的深圳集散中心，从深圳集散中心再送到武汉集散中心，从武汉集散中心再寄到北京顺义集散中心。这个每个集散中心，就相当于网络中的一个IP节点。</strong></p>
+<p>6.数据链路层 </p>
+<p>将比特组合成字节,再将字节组合成帧,使用链路层地址 (以太网使用MAC地址)来访问介质,并进行差错检测。</p>
+<p>数据链路层又分为2个子层：逻辑链路控制子层（LLC）和媒体访问控制子层（MAC）。 </p>
+<p>MAC子层处理CSMA/CD算法、数据出错校验、成帧等；LLC子层定义了一些字段使上次协议能共享数据链路层。 在实际使用中，LLC子层并非必需的。</p>
+<p>这个没找到合适的例子</p>
+<p>7.物理层     </p>
+<p>实际最终信号的传输是通过物理层实现的。通过物理介质传输比特流。规定了电平、速度和电缆针脚。常用设备有（各种物理设备）集线器、中继器、调制解调器、网线、双绞线、同轴电缆。这些都是物理层的传输介质。</p>
+<p><strong>快递寄送过程中的交通工具，就相当于我们的物理层，例如汽车，火车，飞机，船。</strong></p>
+<hr>
+<hr>
+<h3 id="TCP-IP五层模型"><a href="#TCP-IP五层模型" class="headerlink" title="TCP/IP五层模型"></a>TCP/IP五层模型</h3><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/sQRonS"><img src="https://s3.ax1x.com/2021/01/09/sQRonS.md.png" alt="sQRonS.md.png"></a><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/sQRh1P"><img src="https://s3.ax1x.com/2021/01/09/sQRh1P.md.png" alt="sQRh1P.md.png"></a></p>
+<p>在每一层都工作着不同的设备，比如我们常用的交换机就工作在数据链路层的，一般的路由器是工作在网络层的。</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a target="_blank" rel="noopener" href="https://imgchr.com/i/sQR5X8"><img src="https://s3.ax1x.com/2021/01/09/sQR5X8.md.png" alt="sQR5X8.md.png"></a></h2><hr>
+<hr>
+<h3 id="通信子网和资源子网"><a href="#通信子网和资源子网" class="headerlink" title="通信子网和资源子网"></a>通信子网和资源子网</h3><p>通信子网的功能是把信息从一台主机传输到另一台主机；</p>
+<p>资源子网是各种网络资源（硬件、软件、数据信息）的集合。</p>
+<p>通信子网在OSI最下三层：物理层，数据链路层，网络层。其他为资源子网；</p>
+<hr>
+<hr>
+<h3 id="IP种类"><a href="#IP种类" class="headerlink" title="IP种类"></a>IP种类</h3><p><a target="_blank" rel="noopener" href="https://imgchr.com/i/sQRKWq"><img src="https://s3.ax1x.com/2021/01/09/sQRKWq.md.png" alt="sQRKWq.md.png"></a><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/sQRQS0"><img src="https://s3.ax1x.com/2021/01/09/sQRQS0.png" alt="sQRQS0.png"></a></p>
+<p>A类：(1.0.0.0-126.0.0.0)（默认子网掩码：255.0.0.0或 0xFF000000）第一个字节为网络号，后三个字节为主机号。该类IP地址的最前面为“0”，所以地址的网络号取值于1~126之间。一般用于大型网络。</p>
+<p>B类：(128.0.0.0-191.255.0.0)（默认子网掩码：255.255.0.0或0xFFFF0000）前两个字节为网络号，后两个字节为主机号。该类IP地址的最前面为“10”，所以地址的网络号取值于128~191之间。一般用于中等规模网络。</p>
+<p>C类：(192.0.0.0-223.255.255.0)（子网掩码：255.255.255.0或 0xFFFFFF00）前三个字节为网络号，最后一个字节为主机号。该类IP地址的最前面为“110”，所以地址的网络号取值于192~223之间。一般用于小型网络。</p>
+<p>D类：是多播地址。该类IP地址的最前面为“1110”，所以地址的网络号取值于224~239之间。一般用于多路广播用户[1]  。</p>
+<p>E类：是保留地址。该类IP地址的最前面为“1111”，所以地址的网络号取值于240~255之间。</p>
+<h3 id="TCP-IP协议簇"><a href="#TCP-IP协议簇" class="headerlink" title="TCP/IP协议簇"></a>TCP/IP协议簇</h3><p>SLIP协议</p>
+<p>SLIP提供在串行通信线路上封装IP分组的简单方法，使远程用户通过电话线和MODEM能方便地接入TCP/IP网络。首先，SLIP不支持在连接过程中的动态IP地址分配，通信双方必须事先告知对方IP地址，这给没有固定IP地址的个人用户上INTERNET网带来了很大的不便。其次，SLIP帧中无校验字段，因此链路层上无法检测出差错，必须由上层实体或具有纠错能力MODEM来解决传输差错问题。</p>
+<p>PPP协议</p>
+<p>为了解决SLIP存在的问题，PPP协议是一种有效的点对点通信协议。</p>
+<p>IP协议</p>
+<p>即互联网协议(Internet Protocol)，它将多个网络连成一个互联网，可以把高层的数据以多个数据包的形式通过互联网分发出去。IP的基本任务是通过互联网传送数据包，各个IP数据包之间是相互独立的。</p>
+<p>ICMP协议</p>
+<p>即互联网控制报文协议。从IP互联网协议的功能，可以知道IP 提供的是一种不可靠的无连接报文分组传送服务。若路由器或主机发生故障时网络阻塞，就需要通知发送主机采取相应措施。为了使互联网能报告差错，或提供有关意外情况的信息，在IP层加入了一类特殊用途的报文机制，即ICMP。分组接收方利用ICMP来通知IP模块发送方，进行必需的修改。ICMP通常是由发现报文有问题的站产生的，例如可由目的主机或中继路由器来发现问题并产生的ICMP。如果一个分组不能传送，ICMP便可以被用来警告分组源，说明有网络，主机或端口不可达。ICMP也可以用来报告网络阻塞。</p>
+<p>ARP协议</p>
+<p>即地址转换协议。在TCP/IP网络环境下，每个主机都分配了一个32位的IP地址，这种互联网地址是在网际范围标识主机的一种逻辑地址。为了让报文在物理网上传送，必须知道彼此的物理地址。这样就存在把互联网地址变换成物理地址的转换问题。这就需要在网络层有一组服务将 IP地址转换为相应物理网络地址，这组协议即ARP。</p>
+<p>TCP协议</p>
+<p>即传输控制协议，TCP采用“带重传的肯定确认”技术来实现传输的可靠性。并使用“滑动窗口”的流量控制机制来提高网络的吞吐量。TCP通信建立实现了一种“虚电路”的概念。双方通信之前，先建立一条链接然后双方就可以在其上发送数据流。这种数据交换方式能提高效率，但事先建立连接和事后拆除连接需要开销。</p>
+<p>UDP协议</p>
+<p>即用户数据包协议，发送方可以区分一台计算机上的多个接收者。每个UDP报文除了包含数据外还有报文的目的端口的编号和报文源端口的编号，从而使UDP软件可以把报文递送给正确的接收者，然后接收者要发出一个应答。</p>
+<p>FTP协议</p>
+<p>即文件传输协议，它使用户可以在本地机与远程机之间进行有关文件的操作。FTP工作时建立两条TCP链接，分别用于传送文件和用于传送控制。FTP采用客户/服务器模式?</p>
+<p>DNS协议</p>
+<p>即域名服务协议，它提供域名到IP地址的转换，允许对域名资源进行分散管理。</p>
+<p>SMTP协议</p>
+<p>邮件传送协议，SMTP作为应用层的服务，并不关心它下面采用的是何种传输服务，它可通过网络在TXP链接上传送邮件，或者在同一机器的进程之间通过进程通信的通道来传送邮件</p>
+
+    </div>
+     
+    <div class="post-footer__meta"><p>updated at 2021-03-09</p></div> 
+    <div class="post-meta__cats"><a href="/tags/%E8%B5%84%E6%96%99/" class="post-tags__link button"># 资料</a></div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2021/03/17/ENGLISH/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            eeee
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2021/03/17/c%E8%AF%AD%E8%A8%80%E8%AF%95%E5%8D%B7/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            no title
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2021 <a href="/">NB的网站</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>
