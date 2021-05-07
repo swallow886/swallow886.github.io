@@ -33,16 +33,16 @@
 
     <!-- OpenGraph -->
  
-    <meta name="description" content="这是 &amp;#123;  &quot;firstName&quot;: &quot;John&quot;,  &quot;lastName&quot;: &quot;Smith&quot;,  &quot;age&quot;: 25&amp;#125;">
+    <meta name="description" content="这是  &amp;#123;   &quot;firstName&quot;: &quot;John&quot;,   &quot;lastName&quot;: &quot;Smith&quot;,   &quot;age&quot;: 25 &amp;#125;    int main()&amp;#123;    int i, j;    for (i &#x3D; 0; i &lt; 30; i++)     &amp;#123;        for (j &#x3D; 0; j &lt; 30; j++)         &amp;#123;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="test1">
 <meta property="og:url" content="http://example.com/2021/03/31/test/index.html">
 <meta property="og:site_name" content="是瑞啊!">
-<meta property="og:description" content="这是 &amp;#123;  &quot;firstName&quot;: &quot;John&quot;,  &quot;lastName&quot;: &quot;Smith&quot;,  &quot;age&quot;: 25&amp;#125;">
+<meta property="og:description" content="这是  &amp;#123;   &quot;firstName&quot;: &quot;John&quot;,   &quot;lastName&quot;: &quot;Smith&quot;,   &quot;age&quot;: 25 &amp;#125;    int main()&amp;#123;    int i, j;    for (i &#x3D; 0; i &lt; 30; i++)     &amp;#123;        for (j &#x3D; 0; j &lt; 30; j++)         &amp;#123;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-31T15:45:45.443Z">
-<meta property="article:modified_time" content="2021-04-01T09:09:12.507Z">
-<meta property="article:author" content="验睿">
+<meta property="article:modified_time" content="2021-05-07T16:12:05.691Z">
+<meta property="article:author" content="验玉">
 <meta name="twitter:card" content="summary_large_image">
 
 
@@ -52,14 +52,24 @@
 
     
     
-        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/highlight.css" media="none">
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/prism.min.css" media="none">
+        
+            <link rel="stylesheet" id="hl-dark-theme" href="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/prism-dark.min.css" media="none">
         
     
+    
+
 
     
     
+<link rel="stylesheet" href="/css/style/dark.css">
 
     
+<script src="/js/darkmode.js"></script>
+
+
 
      
 
@@ -85,17 +95,21 @@
                 
                     <a href="/archives/" class="navbar-menu button">归档</a>
                 
-                    <a href="/friends/" class="navbar-menu button">友链</a>
-                
-                    <a href="/page/" class="navbar-menu button">Page</a>
-                
             </div>
         
         
         
+    <a href="/search/" id="btn-search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="32"><path d="M192 448c0-141.152 114.848-256 256-256s256 114.848 256 256-114.848 256-256 256-256-114.848-256-256z m710.624 409.376l-206.88-206.88A318.784 318.784 0 0 0 768 448c0-176.736-143.264-320-320-320S128 271.264 128 448s143.264 320 320 320a318.784 318.784 0 0 0 202.496-72.256l206.88 206.88 45.248-45.248z"></path></svg>
+    </a>
+
 
         
         
+    <a href="javaScript:void(0);" id="btn-toggle-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </a>
+
 
         
 
@@ -108,10 +122,6 @@
                     <a href="/tags/" class="dropdown-menu button">标签</a>
                 
                     <a href="/archives/" class="dropdown-menu button">归档</a>
-                
-                    <a href="/friends/" class="dropdown-menu button">友链</a>
-                
-                    <a href="/page/" class="dropdown-menu button">Page</a>
                 
             </div>
         
@@ -147,12 +157,65 @@
     <div class="post__header"></div>
     <div class="post__content">
         <p>这是</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;firstName&quot;</span>: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;lastName&quot;</span>: <span class="string">&quot;Smith&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;age&quot;</span>: <span class="number">25</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="language-json" data-language="json"><code class="language-json">
+<span class="token punctuation">&#123;</span>
+  <span class="token property">"firstName"</span><span class="token operator">:</span> <span class="token string">"John"</span><span class="token punctuation">,</span>
+  <span class="token property">"lastName"</span><span class="token operator">:</span> <span class="token string">"Smith"</span><span class="token punctuation">,</span>
+  <span class="token property">"age"</span><span class="token operator">:</span> <span class="token number">25</span>
+<span class="token punctuation">&#125;</span>
+</code></pre>
 
+<pre class="language-c" data-language="c"><code class="language-c">
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>    <span class="token keyword">int</span> i<span class="token punctuation">,</span> j<span class="token punctuation">;</span>    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">30</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">30</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#123;</span>            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"*\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre>
+
+<p>$$</p>
+<p>$$</p>
+<pre class="language-none"><code class="language-none">hexo woeld</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>闪闪发光</th>
+<th>发</th>
+<th>发d</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>d 的</td>
+<td>的</td>
+<td>的</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ol>
+<li></li>
+</ol>
+<ul>
+<li></li>
+</ul>
+<ul>
+<li><input disabled="" type="checkbox"> </li>
+</ul>
+<hr>
 
     </div>
      
-    <div class="post-footer__meta"><p>updated at 2021-04-01</p></div> 
+    <div class="post-footer__meta"><p>updated at 2021-05-08</p></div> 
     <div class="post-meta__cats"></div> 
 </article>
 
